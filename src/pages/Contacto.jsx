@@ -1,7 +1,14 @@
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Send, MessageCircle, Mail, Instagram, Linkedin } from 'lucide-react'
+import { Send, MessageCircle, Mail } from 'lucide-react'
 import { siteData } from '../data/siteData'
+
+const InstagramIcon = ({ size = 15 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+)
+const LinkedinIcon = ({ size = 15 }) => (
+  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+)
 
 export default function Contacto() {
   const [enviado, setEnviado] = useState(false)
@@ -78,10 +85,10 @@ export default function Contacto() {
                   <span className="w-9 h-9 rounded-full bg-crema-oscura flex items-center justify-center"><MessageCircle size={15} /></span>WhatsApp
                 </a>
                 <a href={siteData.redes.instagram} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-texto/70 hover:text-verde-oscuro transition-colors">
-                  <span className="w-9 h-9 rounded-full bg-crema-oscura flex items-center justify-center"><Instagram size={15} /></span>Instagram
+                  <span className="w-9 h-9 rounded-full bg-crema-oscura flex items-center justify-center"><InstagramIcon size={15} /></span>Instagram
                 </a>
                 <a href={siteData.redes.linkedin} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-sm text-texto/70 hover:text-verde-oscuro transition-colors">
-                  <span className="w-9 h-9 rounded-full bg-crema-oscura flex items-center justify-center"><Linkedin size={15} /></span>LinkedIn
+                  <span className="w-9 h-9 rounded-full bg-crema-oscura flex items-center justify-center"><LinkedinIcon size={15} /></span>LinkedIn
                 </a>
               </div>
             </div>
